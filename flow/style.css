@@ -1,0 +1,103 @@
+/* ベース設定 */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  overflow: hidden;
+}
+
+
+
+/* ノードキャンバス */
+#canvas {
+  width: 100vw;
+  height: 100vh;
+  background: #f0f0f0;
+  position: relative;
+}
+
+
+
+/* ノードブロック */
+.create-block {
+  position: absolute;
+}
+
+.block-content {
+  padding: 15px;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 260px;
+  height: 100px;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/* プラスボタン */
+.add-button {
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #adb1ae;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* モーダル */
+.settings-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 700px;
+  height: 700px;
+  background: white;
+  transform: translate(-50%, -50%);
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 40px;
+  z-index: 10000;
+  overflow-y: auto;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+
+    header {
+      background-color: #1e293b;
+      color: white;
+      padding: 1rem;
+      font-size: 1.2rem;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10000;
+    }
+    .sidebar {
+      width: 220px;
+      background-color: #f1f5f9;
+      padding: 1rem;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      top: 64px;
+      bottom: 0;
+      left: 0;
+      z-index: 9999;
+    }
+
+    #svg-lines {
+      position: absolute;
+      top: 64px;
+      left: 220px;
+      width: calc(100% - 220px);
+      height: calc(100% - 64px);
+      z-index: 9998;
+      pointer-events: none;
+    }
